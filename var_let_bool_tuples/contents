@@ -1,0 +1,74 @@
+import UIKit
+
+//변수 상수
+//변수
+var str = "Hello, playground"
+
+var age = 10
+
+age = 20
+age = 30
+age = 55
+
+str = "hi";
+
+
+//Swift 언어 특징
+//Type Safe 타입 안정성, 타입이 엄격
+
+//age ="hi" 에러  string to int 가 안된다.
+//str = 111
+
+//상수
+let name = "john"
+
+//Type Annotations
+var str2:String = "Hello World"
+var mAge:Int = 1
+var screenHeight:Float = 560
+
+//boolean
+var isOpen = false
+///*==!isOpen*/
+///
+if isOpen == false {
+    
+}else{
+    
+}
+
+//Tuples
+var str3 = "Hello"
+var topTileInfo = ("메인","MainIcon.png")
+//topTileInfo.0 첫번째 값
+//topTileInfo.1 두번째 값
+
+//Http status code
+var httpError = (statusCODE: 404, customDescription: "Page Not Found")
+//httpError.customDescription
+//httpError.statusCODE
+
+//optional
+//값이 있을 수도 있고, 없을 수도 있다.
+//값이 있다.
+//값이 없다.
+
+//0 != NULL
+//0을 값이 없는 상태로 처리하는 것은 틀린 로직이다.
+
+var myAge:Int = 0
+
+
+if myAge == 0 {
+//    나이를 입력해 주세요
+}
+
+if myAge == nil {
+    //이름을 입력해주세요
+}
+
+//""와 NULL은 다르다.
+var myName : String? = ""
+if myName == ""{
+    //이름값이 없음.
+}
