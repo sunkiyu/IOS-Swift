@@ -1,0 +1,37 @@
+import UIKit
+
+//String
+
+let myName = "lee min kim"
+
+for character in myName {
+    print(character)
+}
+ 
+let myName2 = "kim"
+let name = myName + myName2
+let myNmae3 = "lee\nmin\nhi"
+
+let myLongStr =
+"""
+hi
+  hello
+welcome
+"""
+
+print(myLongStr)
+
+let isOn = false
+isOn.description
+
+let number = 123
+number.description
+String(number)
+
+"my Number is \(number)"
+"my Number is \(number)".last
+"my Number is \(number)".dropLast()
+"my Number is \(number)".dropFirst()
+
+let num = 12.33
+String(num).split(separator: ".")
