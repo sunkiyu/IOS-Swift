@@ -1,0 +1,54 @@
+import UIKit
+
+//Collection Types
+//집합
+//Array Set Dictionary
+
+//Array
+//Swift - type Safe
+
+var myNames = Array<String>()
+//위와 같은 표현이다. [] == Array
+var myAges = [Int]()
+
+myNames.append("kim")
+myNames.append("lee")
+myNames.append("jin")
+
+myNames[0]
+myNames[1]
+myNames[2] + "님"
+
+
+let idx = 3
+
+//segment fault crash 예외처리
+if myNames.count > idx {
+    myNames[idx]
+}
+
+myNames.append(contentsOf: ["hi","hello"])
+myNames = myNames + ["hi"]
+myNames.remove(at: 0)
+myNames.removeFirst()
+myNames
+
+if myNames.count == 0 {
+    
+}
+
+if myNames.isEmpty {
+    
+}
+
+//myNames.removeAll()
+//0번째 인덱스에 값 삽입
+myNames.insert("hhh", at: 0)
+
+for name in myNames{
+    print(name + "님")
+}
+
+for (index,name) in myNames.enumerated(){
+    print(index,name)
+}
