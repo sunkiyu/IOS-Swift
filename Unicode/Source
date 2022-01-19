@@ -1,3 +1,5 @@
+import UIKit
+
 //unicode 범위 관련
 //숫자만 입력 받아야 한다.
 //키보드 제한 -> .
@@ -16,3 +18,4 @@ if inputValue >= "\u{30}" && inputValue <= "\u{39}" {
 //영어만 입력
 "\u{41}" //A
 "\u{7a}" //z
+
