@@ -1,0 +1,60 @@
+//Optionals
+//값이 있을 수도 있고 없을 수도 있다.
+
+var a: Int? =10
+var b: Int? = 20
+
+//unwrapped
+//Int? -> Int
+//String?->String
+
+//coalesce
+var c = (a ?? 0) + (b ?? 0)
+
+//force unwrap ->강제로 unwrap
+//주의사항 값이 무조건 있을 경우에만 force unwrap 사용한다
+var d = a! + b!
+
+
+//Unwrapping
+//if Statements
+
+if a != nil {
+    //강제 Unwrapping
+    print(a!)
+}
+
+// if let
+//if var
+
+//상수
+if let hasNumber = a{
+    //hasNumber = hasNumber * 2
+    print(hasNumber);
+}
+
+//변수
+if var hasNumber = a{
+    hasNumber = hasNumber * 2
+    print(hasNumber);
+}
+
+//guard let
+//guard var
+func aaa(){
+guard let hasNumer = a else {
+    return
+}
+}
+
+func testFunc(){
+    //guard 값이 없으면 return 에서 끝나버린다.
+    guard let hasNumer = a else {
+    return
+}
+    print(hasNumer)
+    print("end")
+}
+
+testFunc()
+print("end")
