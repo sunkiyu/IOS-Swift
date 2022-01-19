@@ -1,0 +1,89 @@
+import UIKit
+
+//기초 연산자
+//+ - * / % (나머지)
+
+let a:Int = 20
+let b:Double = 30
+
+var aaa:Int = 20
+
+aaa = aaa + 2
+aaa += 2
+aaa = aaa - 2
+aaa -= 2
+
+let c = a+Int(b)
+
+
+//a,b는 소수점이 없으므로 int type
+//Swift 언어 특징
+//타입 엄격
+//강타입, type safe
+//int + double 안된다.
+//let d = a + b. //Error
+
+let aa = "hi"
+let bb = " hello"
+let cc = aa+bb
+
+
+//% 홀수, 짝수
+//int는 % 사용가능 double은 안됨(소수점)
+if a % 2 == 0 {
+    print("짝수")
+}else{
+    print("홀수")
+}
+
+if b.truncatingRemainder(dividingBy: 2) == 0 {
+    print("짝수")
+}else{
+    print("홀수")
+}
+
+//비교 연산자
+
+let ab = 20
+let cd = 30
+
+//Bool Type
+ab == cd
+ab != cd
+
+ab > cd
+ab < cd
+ab >= cd
+ab <= cd
+
+if ab > cd {
+    
+}else{
+    
+}
+
+//문자도 숫자값으로 사용되어있다.
+let sa = "a"
+let sb = "b"
+
+sa == sb
+sa != sb
+
+sa > sb
+sa < sb
+sa >= sb
+sa <= sb
+
+if sa > sb {
+    
+}else{
+    
+}
+
+"\u{61}" //Unicode a
+"\u{62}" //Unicode b
+
+
+
+
+
