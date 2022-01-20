@@ -9,6 +9,7 @@ var b: Int? = 20
 //String?->String
 
 //coalesce
+//값이 없는 경우 기본 타입을 지정한다.
 var c = (a ?? 0) + (b ?? 0)
 
 //force unwrap ->강제로 unwrap
