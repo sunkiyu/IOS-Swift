@@ -1,0 +1,33 @@
+import UIKit
+
+//Set 순서 개념이 없다.
+
+var names = Set<String>()
+var names2 : Set = ["lee","kim","min"]
+
+var numbers1: Set = [1,2,3,4,5]
+var numbers2: Set = [4,5,6,7,8]
+
+//교집합
+numbers1.intersection(numbers2)
+
+//합집합
+numbers1.union(numbers2)
+
+//합집합 - 교집합(대칭차집합)
+numbers1.symmetricDifference(numbers2)
+
+//여집합
+numbers1.subtracting(numbers2)
+
+names.insert("kim")
+names.insert("mim")
+names.insert("lee")
+
+//순서가 매번 바뀐다. 중복된 값이 들어가지 않는다.
+names
+
+//Array 타입은 중복값이 들어간다.
+var sameNames = ["lee","lee","kim"]
+//set Type으로 변환해 중복값을 제거
+Set(sameNames)
