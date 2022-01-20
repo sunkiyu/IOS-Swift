@@ -1,0 +1,75 @@
+import UIKit
+import Foundation
+
+//Control flow 흐름제어
+
+let name = "anna"
+let name2 = "24323424233"
+
+for char in name {
+    print(char)
+}
+
+for num in name2 {
+    print( (Int(String(num)) ?? 0) * 10 )
+}
+
+let names = ["lee","kim","min"]
+
+for idx in 0..<name.count {
+    print(idx)
+}
+
+for name in names {
+    print(name + "님")
+}
+
+//dictionary
+let numberOfLegs = ["ant" : 6, "dog" : 4]
+
+for dic in numberOfLegs {
+    print(dic)
+}
+
+for idx in 0..<5 {
+    print(idx)
+}
+
+for idx in 0...5 {
+    print(idx)
+}
+
+//while 주의 웬만하면 사용하지 않는게 좋다.
+//while condition {
+//    code
+//}
+
+var a = 0
+
+while (a < 10) {
+    a += 1
+    print("continue")
+}
+
+//Switch
+//조건에 케이스 만들어서 분기
+
+let b = "c"
+let c = 1
+switch b {
+case "a", "b", "c":
+    print("a or b or c")
+case "b":
+    print("b")
+default:
+    print("other")
+}
+
+switch c {
+case 1:
+    print("a or b or c")
+case 2...5:
+    print("b")
+default:
+    print("other")
+}
