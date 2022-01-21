@@ -1,0 +1,22 @@
+import UIKit
+import Foundation
+
+//Closure(클로저)
+//Func와 유사
+//Function
+func myScore(a:Int) -> String{
+    return "\(a)점"
+}
+
+let score = myScore(a: 100)
+
+score
+
+let score2 = myScore
+score2(100)
+//closure
+let myClosure = { (a:Int) -> String in
+    return "\(a)점"
+}
+
+myClosure(100)
