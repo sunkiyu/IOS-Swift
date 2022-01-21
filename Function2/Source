@@ -1,0 +1,44 @@
+import UIKit
+import Foundation
+
+//function(함수)
+
+let a = 10
+let b = 20
+
+var c = 0
+func customPlus(_ num1:Int,_ num2:Int) -> Int {
+    return num1 + num2
+}
+
+func minus(_ num1:Int,_ num2:Int) -> Int {
+    return num1 - num2
+}
+
+func multiply(_ num1:Int,_ num2:Int) -> Int {
+    return num1 * num2
+}
+
+//View, Present, Display
+
+var inputButtonType = "+"
+
+if inputButtonType == "+" {
+    print("연산 결과", customPlus(a, b))
+}
+else if inputButtonType == "-"
+{
+    print(minus(a, b))
+}
+
+func calc(result: ((Int, Int) -> Int)) {
+    print("연산 결과", result(a,b))
+}
+
+if inputButtonType == "+" {
+    calc(result: customPlus)
+}
+else if inputButtonType == "-"
+{
+    calc(result: minus)
+}
