@@ -1,0 +1,55 @@
+import UIKit
+import Foundation
+
+//Closure(클로저)
+//Func와 유사
+//Function
+func myScore(a:Int) -> String{
+    return "\(a)점"
+}
+
+let score = myScore(a: 100)
+
+score
+
+let score2 = myScore
+score2(100)
+//closure
+let myClosure = { (a:Int) -> String in
+    return "\(a)점"
+}
+
+//축약 생략, 리턴값 한줄 일경우
+let myClosure2 = { (a:Int) -> String in
+    "\(a)점"
+}
+
+//축약 리턴 표시
+let myClosure3 = { (a:Int) in
+    "\(a)점"
+}
+
+myClosure3(1000)
+
+//값을 보고 타입 추론
+var myAge = 20
+
+let myScore5 : (Int) -> String = { a in
+    "\(a)점"
+}
+
+let myScore6 : (Int,Int) -> String = { (a,b) in
+    "\(a+b)점"
+}
+
+let myScore7 : (Int) -> String = {
+    "\($0)점"
+}
+
+let myScore8 : (Int,Int,Int) -> String = {
+    "\($0+$1+$2)점"
+}
+
+myScore5(100)
+myScore6(100,100)
+myScore8(100,100,100)
