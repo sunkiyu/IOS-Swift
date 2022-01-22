@@ -1,0 +1,60 @@
+import UIKit
+import Foundation
+
+//Closure 실전
+//조건 -> 특정한 글자가 포함된 것을 찾는다.
+//조건 -> 입력한 글자가 첫글자가 되는 것을 찾는다.
+let names = ["apple","air","brown","red","orange","blue","candy"]
+
+func someFind(find:String) -> [String]{
+    var newNames = [String]()
+    
+    for name in names{
+        if name.contains(find){
+            newNames.append(name)
+        }
+    }
+    
+    return newNames
+}
+
+let containsText:(String,String)->Bool = {name, find in
+    if name.contains(find){
+        return true
+    }
+    return false
+}
+
+let isStartSome:(String, String) -> Bool = {name, find in
+    if name.first?.description == find{
+        return true
+    }
+    return false
+}
+
+func find(findString: String,condition: (String,String)->Bool)->[String]{
+    var newNames = [String]()
+    for name in names{
+       if condition(name,findString){
+            newNames.append(name)
+        }
+    }
+    return newNames
+}
+
+find(findString: "a",condition: containsText)
+find(findString: "a", condition: isStartSome)
+
+func someFind2(find:String) -> [String]{
+    var newNames = [String]()
+    
+    for name in names{
+        if name.contains(find){
+            newNames.append(name)
+        }
+    }
+    
+    return newNames
+}
+
+someFind(find: "c")
