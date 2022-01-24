@@ -1,1 +1,31 @@
+import UIKit
+import Foundation
 
+//Closure
+var names = ["apple","air","brown","red","orange","blue","candy"]
+
+//리턴 생략가능
+names.sorted { (lhs, rhs) -> Bool in
+    return lhs < rhs
+    //lhs < rhs
+}
+
+//sort
+names.sort { (lhs, rhs) -> Bool in
+    return lhs < rhs
+}
+
+names.sorted { $0 < $1 }
+//위와 같다.
+names.sort(by : { $0 < $1 } )
+//위와 같다.
+names.sort(by: < )
+
+names.sort() { $0 > $1 }
+
+//sort 원본이 정렬됨
+names.sort();
+names
+//원본은 그대로고 리턴값으로 정렬된 값이 나온다.
+let ret = names.sorted();
+ret
