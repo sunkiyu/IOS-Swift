@@ -1,0 +1,105 @@
+import UIKit
+import Foundation
+
+//Enumerations
+
+//enum
+//타입분류
+
+// 도서관 -> 항목 -> 소설, 문제집
+//분류만 하고 싶다.
+
+enum BookType
+{
+    case fiction
+    case comics
+    case workbook
+}
+
+
+
+enum BookType2
+{
+    case fiction2(title: String, price: Int, year: Int)
+    case comics2(title: String, price: Int, year: Int)
+    case workbook2(title: String, price: Int, year: Int)
+}
+
+extension BookType2{
+    var typeName: String {
+        switch self {
+        case .comics2:
+            return "comics"
+        case .fiction2:
+            return "fiction"
+        default:
+            return ""
+        }
+    }
+}
+
+//기본타입 설정
+var bookStyle = BookType.comics
+
+var bookStype2 : BookType?
+var books = [BookType]()
+var books2 = [BookType2]()
+func saveBook(book: BookType){
+    
+    switch book {
+    
+    case .comics:
+        books.append(book)
+    case.fiction:
+        books.append(book)
+    default:
+        books.append(book)
+    }
+}
+ 
+
+func saveBook2(book: BookType){
+    books.append(book)
+}
+
+func saveBook3(book: BookType2){
+    books2.append(book)
+}
+
+saveBook2(book: .comics)
+saveBook2(book: .workbook)
+saveBook2(book: .workbook)
+
+func loadBook(book: BookType) -> [BookType]{
+    var tempBooks = [BookType]()
+    
+    for item in books {
+        if item == book{
+            tempBooks.append(item)
+        }
+    }
+    
+    return tempBooks
+}
+
+
+loadBook(book: .workbook)
+
+saveBook3(book: .comics2(title: "aaa", price: 5000, year: 2020))
+saveBook3(book: .comics2(title: "bbb", price: 6000, year: 2020))
+saveBook3(book: .comics2(title: "ccc", price: 7000, year: 2021))
+
+for book in books2
+{
+    if case let BookType2.comics2(a,b,c) = book{
+        print(a,book.typeName)
+    }
+//    switch book {
+//        //안쓰는것 _언더바 처리
+//    case let .comics2(a, b, _):
+//        print(a)
+//        print(b)
+//    default:
+//        break;
+//    }
+}
